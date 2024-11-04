@@ -21,7 +21,7 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: calc(1.2rem + 1.5vw);
   font-weight: 800;
 }
 
@@ -62,11 +62,13 @@ header {
 
         &.light {
           background:  #ffffff;
+          padding: 0 24px;
         }
 
         &.dark {
           background: #23272A;
           color: #ffffff;
+          padding: 0 16px;
         }
      }
     }
@@ -83,7 +85,7 @@ main {
     gap: 24px;
     padding: 40px 24px;
 
-    .section-content {
+    .section-texts {
       display: flex;
       flex-direction: column;
       gap: 24px;
@@ -102,3 +104,63 @@ footer {
   background-color: #23272A;
   height: 140px;
 }
+
+@media screen and (min-width: 750px) {
+  header{
+   .content {
+      justify-content: center;
+      align-items: center;
+      max-width: 750px;
+      margin: 0 auto;
+      text-align: center;
+
+      .buttons {
+        flex-direction: row;
+      }
+    }
+  }
+
+    main {
+      .container-main {
+
+        section {
+          align-items: center;
+
+          .content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .section-texts {
+              max-width: 350px;
+
+              h2 {
+                font-size: calc(1rem + 2vw);
+              }
+            }
+
+            img {
+              height: 400px;
+            }
+
+            
+          }
+
+          .reverse {
+            flex-direction: row-reverse;
+          }
+
+          .content-2 {
+            text-align: center;
+            max-width: 800px;
+
+            img {
+              height: 500px;
+            }
+          }
+        }
+
+
+      }
+    }
+  }
